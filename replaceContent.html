@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery CSSDemo</title>
+        <!-- import JQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <p>
+            This example will show you how to change the content of an element.
+        </p>
+        <p>
+       <div class="demobox">
+           This box has a class of "demobox". Clicking the button below will replace this text.
+       </div>
+        </p>
+        <p>
+            <button id="myButt">Click me!</button>
+        </p>
+        <p>
+          <a href="index.html"><- back</a>
+        </p>
+        <!-- Your JQuery goes here, the "script" element s usually places before the /body tag -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                  //all js goes in here
+                  //the code below adds the background color style to the div with the class demobox on mousedown
+                  $( "#myButt" ).click(function() {
+                        $(".demobox").html("<p>Text replaced. You can put anything here.</p>");
+                    });
+
+                });
+        </script>
+
+    </body>
+</html>

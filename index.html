@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Breakfast Oatmeal</title>
+        <<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Indie+Flower&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <p>
+          <h1>Savannah's Breakfast Oatmeal Recipe</h1>
+
+        </p>
+        <head>
+          <meta charset="utf-8">
+          <title>Slideshow</title>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <link rel="stylesheet" href="css/slideshow.css">
+        </head>
+        <body>
+
+
+          <div id="slideshow">
+         <div>
+           <img src="images/oats.jpeg" width="300" height="169">
+         </div>
+         <div>
+           <img src="images/almost.jpeg" width="300" height="169">
+         </div>
+         <div>
+           <img src="images/finish.jpeg" width="300" height="169">
+         </div>
+      </div>
+
+      <p>
+        <a href="index.html"><- back</a>
+      </p>
+      <script type="text/javascript">
+          $(document).ready(function(){
+              //hide all divs except the first
+            $("#slideshow > div:gt(0)").hide();
+
+            //next slide
+            setInterval(function() {
+              $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+                //3000 milliseconds
+            },  3000);
+
+              });
+      </script>
+
+
+      <h3>Every morning for breakfast I go downstairs and make myself this oatmeal! Because I'm not a good cook, this dish is super easy to make! It's especially easy for days where you're in a bit of rush, because it only takes a few quick minutes. This oatmeal is also incredibly healthy and filling! Although I'm using my favorite fruit in this recipe, feel free to add more of your favorites to spice it up a bit.</h3>
+      <br>
+      <p>
+        <h2>Ingredients:</h2>
+      </p>
+
+      <div class="accordion">
+
+      <h2><a href="">Quaker's oatmeal</a></h2>
+      <p>
+       <img src="images/packets.jpeg" class="myimg" width="300">
+       <br>
+       This oatmeal is super easy to find at any local grocery store or pharmacy (such as CVS). There are multiple different flavors-- feel free to choose the one that is most appealing to you. Personally, my favorite and the one I use the most is the protein banana nut oatmeal.
+      </p>
+
+      <h2><a href="">Banana</a></h2>
+      <p>
+      <img src="images/bananas.jpeg" class="myimg" width="300">
+      <br>
+      Feel free to use either one or two bananas! Three would be a bit too much.
+      </p>
+
+      <h2><a href="">Berries</a></h2>
+      <p>
+      <img src="images/berries.jpeg" class="myimg" width="300">
+      <br>
+      My favorite berries to use in this recipe are rasberries, blackberries, and blueberries.
+      </p>
+
+      <h2><a href="">Honey</a></h2>
+      <p>
+      <img src="images/honey.jpeg" class="myimg" width="300">
+      <br>
+      I like to use organic honey, as it's sweeter and richer.
+      </p>
+
+      </div>
+
+      <p>
+        <a href="index.html"><- back</a>
+      </p>
+      <script type="text/javascript">
+          $(document).ready(function(){
+            var allPanels = $('.accordion p').hide();
+
+            $('.accordion > h2 > a').click(function() {
+              allPanels.slideUp();
+              $(this).parent().next().slideDown();
+              return false;
+            });
+
+              });
+      </script>
+<br>
+
+      <p>
+          <h2>Instructions:</h2>
+      </p>
+
+      <p>
+          Follow these very simple ingredients to make your oatmeal:
+      </p>
+      <p>
+     <img src="images/ing.jpg" alt="Robber Ducky" id="ducky" width="500">
+     <img src="images/oats.jpeg" alt="oats" id="ducky" width="150">
+     <img src="images/microwave.jpeg" alt="microwave" id="ducky" width="150">
+     <img src="images/cutbanana.jpeg" alt="cutbanana" id="ducky" width="150">
+     <img src="images/almost.jpeg" alt="almost" id="ducky" width="150">
+     <img src="images/finish.jpeg" alt="finish" id="ducky" width="150">
+      </p>
+      <p>
+          <button id="hideDucky">Hide Instructions!</button>
+          <button id="showDucky">Show Instructions!</button>
+      </p>
+      <p>
+        <a href="index.html"><- back</a>
+      </p>
+
+      <!-- Your JQuery goes here, the "script" element s usually places before the /body tag -->
+      <script type="text/javascript">
+          $(document).ready(function(){
+                //all js goes in here
+                //the code below adds the class chubbySquare to the demo box
+                $( "#hideDucky" ).click(function() {
+                      $("#ducky").hide();
+                  });
+                  //the code below adds the class tealCircle to the demo box
+                  $("#showDucky").mouseup(function(){
+                      $("#ducky").show();
+                  });
+
+              });
+      </script>
+<br>
+      <p>
+        <h2>Health Benefits</h2>
+      </p>
+      <p>
+     <div class="demobox">
+        <ol>
+          1. Oats Are Rich in Antioxidants
+          <br>
+          2. They Can Lower Cholesterol Levels
+          <br>
+          3. Very Nutritious
+          <br>
+          4. May Help You Lose Weight
+          <br>
+          5. Can Improve Blood Sugar Control
+        </ol>
+     </div>
+      </p>
+      <p>
+          <button id="myButt">Click for Health Benefits!</button>
+      </p>
+      <p>
+        <a href="index.html"><- back</a>
+      </p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+                //all js goes in here
+                //the code below toggles between show hide
+                $( "#myButt" ).click(function() {
+                      $(".demobox").toggle(1000);
+                  });
+
+              });
+      </script>
+
+
+
+
+    </body>
+</html>

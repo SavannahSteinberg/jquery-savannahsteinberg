@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery CSSDemo</title>
+        <!-- import JQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <p>
+            This example will show you how to show and hide and element.
+        </p>
+        <p>
+       <img src="images/ducky.jpg" alt="Robber Ducky" id="ducky" width="300">
+        </p>
+        <p>
+            <button id="hideDucky">Hide Ducky!</button>
+            <button id="showDucky">Show Ducky!</button>
+        </p>
+        <p>
+          <a href="index.html"><- back</a>
+        </p>
+
+        <!-- Your JQuery goes here, the "script" element s usually places before the /body tag -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                  //all js goes in here
+                  //the code below adds the class chubbySquare to the demo box
+                  $( "#hideDucky" ).click(function() {
+                        $("#ducky").hide();
+                    });
+                    //the code below adds the class tealCircle to the demo box
+                    $("#showDucky").mouseup(function(){
+                        $("#ducky").show();
+                    });
+
+                });
+        </script>
+
+    </body>
+</html>
